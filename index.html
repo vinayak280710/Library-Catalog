@@ -3,12 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library Catalog</title>
+    <title>Dynamic Library Catalog</title>
+    <link rel="stylesheet" href="catalog.css">
+    <!-- Google Font for modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-   <p>
-    dk ejkd oedk 'e dl'd;'wd;'
-   </p> 
-   <p>kjd edw ;rl rl'  </p>
+
+    <div class="catalog-wrapper">
+        <!-- Header -->
+        <header class="catalog-header">
+            <span class="tagline">Campus Resource System</span>
+            <h1>📚 Library Catalog Hub</h1>
+            <p>Search, filter, and track library assets in real time</p>
+        </header>
+
+        <!-- Dynamic Counter Cards -->
+        <div class="stats-grid">
+            <div class="stat-card total">
+                <div class="stat-icon">📖</div>
+                <div class="stat-info">
+                    <span class="stat-num" id="totalCount">0</span>
+                    <span class="stat-label">Total Books</span>
+                </div>
+            </div>
+            <div class="stat-card available">
+                <div class="stat-icon">✅</div>
+                <div class="stat-info">
+                    <span class="stat-num" id="availableCount">0</span>
+                    <span class="stat-label">Available</span>
+                </div>
+            </div>
+            <div class="stat-card issued">
+                <div class="stat-icon">⏳</div>
+                <div class="stat-info">
+                    <span class="stat-num" id="issuedCount">0</span>
+                    <span class="stat-label">Issued</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls Toolbar -->
+        <div class="toolbar">
+            <div class="search-field">
+                <span class="search-icon">🔍</span>
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search by book title, author, or genre..."
+                    autocomplete="off"
+                >
+                <button id="clearSearch" class="clear-btn" title="Clear search">✕</button>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-group">
+                <button class="filter-pill active" data-filter="all">All</button>
+                <button class="filter-pill" data-filter="available">Available</button>
+                <button class="filter-pill" data-filter="issued">Issued</button>
+            </div>
+        </div>
+
+        <!-- Catalog Table -->
+        <div class="table-responsive">
+            <table class="catalog-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Genre</th>
+                        <th>Status</th>
+                        <th class="text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="catalogBody">
+                    <!-- Dynamic Table Rows -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Interactive Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="catalog.js"></script>
 </body>
 </html>
