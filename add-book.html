@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Library | Add Book</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand">📚 City Digital Library</a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Book Catalog</a></li>
+          <li><a href="add-book.html" class="active">Add New Book</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="form-card">
+      <h1>Add a New Book</h1>
+      <p>Enter the book details below to add it to the digital catalog.</p>
+
+      <form id="add-book-form">
+        <div class="form-group">
+          <label for="book-title">Book Title</label>
+          <input type="text" id="book-title" placeholder="e.g., Clean Code" required>
+        </div>
+
+        <div class="form-group">
+          <label for="book-author">Author Name</label>
+          <input type="text" id="book-author" placeholder="e.g., Robert C. Martin" required>
+        </div>
+
+        <div class="form-group">
+          <label for="book-genre">Genre</label>
+          <select id="book-genre" required>
+            <option value="">-- Select a Genre --</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Science">Science</option>
+            <option value="History">History</option>
+            <option value="Biography">Biography</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="book-status">Initial Status</label>
+          <select id="book-status">
+            <option value="Available">Available</option>
+            <option value="Issued">Issued</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary full-width">Add to Catalog</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Digital Library Catalog Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
