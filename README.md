@@ -37,5 +37,4 @@ Library-Catalog/
 ├── add-book.html     # Form to add new books into the digital catalog
 ├── style.css         # Shared external stylesheet for layout, table, and badges
 ├── script.js         # JavaScript for live search, status toggling, and localStorage
-├── .nojekyll         # Bypasses Jekyll processing on GitHub Pages
 └── README.md         # Project documentation
